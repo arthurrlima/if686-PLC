@@ -9,19 +9,15 @@ mdc a b
  | otherwise    = mdc a (-b)
 
 
---2a:
+--2
 --numDiv :: Integral a => a -> a -> a 
-
-
-
---2b:
-numDivr :: Int -> Int -> Int
+numDivr :: Integral a => a -> a -> a
 numDivr a b 
  | mod a b == 1     = 0
  | otherwise        = 1 + numDivr (div a b) b
 
 
---3:
+ --3:
 unicos :: [Integer] -> [Integer]
 unicos []            = []
 unicos (x:xs)
